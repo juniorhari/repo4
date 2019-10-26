@@ -6,6 +6,7 @@ const express = require("express");
 const app = express();
 const request = require("request");
 const bodyParser = require("body-parser");
+const customDate = require(__dirname + "/views/date.js");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
@@ -16,7 +17,8 @@ var formValueArr = ["apples", "oranges"];
 
 
 app.get("/", function(req,res){
-   res.render("index", { someCrap: "XOW", formValueArr: formValueArr });
+  var customDate1 = customDate.getCustomDate();
+   res.render("index", { someCrap: "XOW", formValueArr: formValueArr, customDate: customDate1 });
 });
 
 app.post("/", function(req, res){
