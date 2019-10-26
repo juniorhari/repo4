@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
 
-<head>
-  <meta charset="utf-8">
-  <title></title>
-</head>
-
-<body>
+<%- include("header") -%>
 
   <h1> <%=   someCrap  %></h1>
   <% var result = ""; if( someCrap === "WOW" ) {   result = "Its Wow"; } else {  result = "XXX";  } %>
@@ -26,6 +19,4 @@
 <% } %>
 </ul>
 
-</body>
-
-</html>
+<%- include("footer") -%>
